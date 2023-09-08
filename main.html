@@ -10,7 +10,18 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
-			
+			let max=-Infinity,secMax=max;
+            for (const i of arr) { 
+				let ele=parseInt(i);
+                if(ele>max){
+                    secMax=max;
+                    max=ele;
+                }
+                else if (ele!=max && ele>secMax) {
+                    secMax=ele;
+                }				
+            }
+            return secMax;
 		}
 
 		function Main() {
